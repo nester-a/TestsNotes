@@ -1,9 +1,9 @@
 ﻿namespace TestsNotes.Domain
 {
-    public class Note : IHasId<string>
+    public class Note : IHasId<Guid>
     {
-        public string Id { get; set; }
-        public string UserId { get; set; }
+        public Guid Id { get; set; }
+        public Guid UserId { get; set; }
         public string Title { get; set; }
         public string Details { get; set; }
         public DateTime CreationDate { get; set; }
