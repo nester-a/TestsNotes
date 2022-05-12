@@ -1,5 +1,10 @@
-﻿namespace TestsNotes.Application.Common.Mappings;
-public interface IMapWith
-{
+﻿using AutoMapper;
 
+namespace TestsNotes.Application.Common.Mappings;
+public interface IMapWith<T>
+{
+    void Mapping(Profile profile)
+    {
+        profile.CreateMap(typeof(T), GetType());
+    }
 }
